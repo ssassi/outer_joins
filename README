@@ -1,0 +1,25 @@
+= OuterJoins
+
+OuterJoins helps making outer joins in Active Record models.
+
+== Install & Use
+
+Install as a plugin:
+
+  $> script/plugin install git://github.com/ssassi/outer_joins.git
+  
+== Examples
+
+Person.scoped(:outer_joins => :country)
+
+Person.find(:all, :outer_joins => :country)
+
+Person.find(:all, :joins => :language, :conditions => ['languages.name = ''Rails'''], :outer_joins => :country, :order => 'countries.name'])
+
+== .
+Copyright (c) 2010, released under LGPL v3 license.
+
+== .
+Contact at:
+ssassi at gmail dot com
+snmgian at gmail dot com
